@@ -2,6 +2,8 @@
 
 GoodBot is a custom made discord bot by a small group of friends for a private discord server. It is in continuous development, and will have new contents added occasionally.
 
+The bot is hosted on [repl.it](https://replit.com) and kept alive with [Uptime Robot](https://uptimerobot.com).
+
 **The features includes and is not limited to:**
 
 - Custom audio playback (mp3, m4a, ogg)
