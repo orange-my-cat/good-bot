@@ -1,13 +1,10 @@
 # GoodBot
 
-GoodBot is a custom made discord bot by a small group of friends for a private discord server. It is in continuous development, and will have new contents added occasionally.
+GoodBot is a custom discord bot made by a small group of friends for a private discord server. It has been in continuous development since 2021, and will have new commands added occasionally.
 
-**The features includes and is not limited to:**
+**Features include but is not limited to:**
 
 -
--
--
-
 
 # License
 
