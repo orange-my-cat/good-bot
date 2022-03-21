@@ -1,4 +1,4 @@
-audio = {
+audio_list = {
     "cbinwei":"PehCibaiInWei.m4a", 
     "pello":"PehHello.m4a", 
     "thamlin":"TerraHamlin.m4a", 
