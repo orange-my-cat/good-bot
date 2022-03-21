@@ -4,7 +4,7 @@ GoodBot is a custom discord bot made by a small group of friends for a private d
 
 **Features include but is not limited to:**
 
--
+- Music playback
 
 # License
 
