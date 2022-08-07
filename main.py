@@ -1,5 +1,5 @@
 import os
-
+import replit
 import discord
 from dotenv import load_dotenv
 from discord.ext import commands
@@ -31,4 +31,5 @@ for filename in os.listdir('./cogs'):
         bot.load_extension(f'cogs.{filename[:-3]}')
         print(f'{filename[:-3].upper()} EXTENSION ADDED!')
 
+replit.replit()
 bot.run(TOKEN)
