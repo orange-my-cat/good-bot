@@ -12,4 +12,4 @@ Released under the [GNU GPL v3](https://www.gnu.org/licenses/gpl-3.0.en.html) li
 
 GoodBot is named after the first version of the server's custom bot - NoobBot.
 
-This bot is hosted on [Wumpus Hosting](https://wumpus.host).
+This bot is hosted on [Replit](https://replit.com/).
