@@ -1,3 +1,4 @@
+import wave
 import wavelink
 from discord.ext import commands
 
@@ -8,15 +9,15 @@ class Player(wavelink.Player):
 class Music(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
-        bot.loop.create_task(self.connect_nodes())
+        self.bot.loop.create_task(self.connect_nodes())
 
     async def connect_nodes(self):
         await self.bot.wait_until_ready()
-
-        await wavelink.NodePool.create_node(bot=self.bot,
+        self.node = await wavelink.NodePool.create_node(bot=self.bot,
                                             host='lava.link',
                                             port=80,
-                                            password='')
+                                            password='',
+                                            region='singapore')
 
     @commands.Cog.listener()
     async def on_wavelink_node_ready(self, node: wavelink.Node):
@@ -25,12 +26,12 @@ class Music(commands.Cog):
     @commands.command(name='connect', aliases=['join'])
     async def connect_command(self, ctx: commands.Context):
         try:
-            channel = ctx.author.voice.channel
             if ctx.voice_client:
-                vc: wavelink.Player = await ctx.voice_client.disconnect()
+                vc: wavelink.Player = await ctx.voice_client.move_to(ctx.author.voice.channel)
+            else:
+                vc: wavelink.Player = await ctx.author.voice.channel.connect(cls=wavelink.Player)
         except AttributeError:
-            return await ctx.send('No voice channel to connect to. Please either provide one or join one.')
-        vc: wavelink.Player = await channel.connect(cls=wavelink.Player)
+            return await ctx.send('Did you join a channel yet?')
         return vc
 
     @commands.command(name='disconnect', aliases=['leave'])
